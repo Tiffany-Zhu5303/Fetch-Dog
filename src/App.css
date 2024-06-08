@@ -6,6 +6,12 @@
   overflow: hidden;
 }
 
+#page-name {
+  font-size: xx-large;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
 .homepage, .homepage-content {
   width: 100vw;
   height: 90vh;

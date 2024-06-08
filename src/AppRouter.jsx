@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import Navbar from './components/navbar';
+import Breeds from './pages/Breeds';
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
         index:true,
         element: <App />
       },
+      {
+        path:"/Breed",
+        element: <Breeds />
+      }
     ],
   },
 ], {
