@@ -1,0 +1,21 @@
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
+
+const Navbar = () => {
+    return(
+        <>
+            <div className='navbar'>  
+                <h2>Dog Fetcher</h2>
+                <div className='nav-links'>
+                <Link to="/Breed" className='nav-link'>Breed</Link>
+                <Link to="/Random" className='nav-link'>Random</Link>
+                <Link to="/Favorites" className='nav-link'>Favorites</Link>
+                <Link to="/About" className='nav-link'>About</Link>
+                </div>
+            </div>
+            <Outlet />
+        </>
+    );
+};
+
+export default Navbar;
