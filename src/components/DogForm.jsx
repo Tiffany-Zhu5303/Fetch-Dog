@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const DogForm = ({ formType, formOptions }) => {
     const updateCounter = () => {
@@ -43,7 +43,7 @@ const DogForm = ({ formType, formOptions }) => {
                             <option value="45" label="45"></option>
                             <option value="50" label="50"></option>
                         </datalist>
-                        <p id="num-dogs-input"></p>
+                        <p id="num-dogs-input">50 dogs</p>
                     </> :
                     <>
                         <h2>Random Fetch</h2>
