@@ -6,10 +6,29 @@
   overflow: hidden;
 }
 
+input[type="range"] {
+  width: 20vw;
+  color:#320C3A;
+}
+
+datalist {
+  width: 20vw;
+  display: flex;
+  justify-content: space-between;
+  font-size: x-small;
+}
+
 #page-name {
   font-size: xx-large;
   font-weight: bolder;
   text-decoration: none;
+}
+
+#breeds-options {
+  width: 20vw;
+  color: #320C3A;
+  background-color: whitesmoke;
+  scrollbar-color: #320C3A #EAE8FF;
 }
 
 .homepage, .homepage-content {
@@ -61,4 +80,28 @@
   color: #957186;
   text-decoration: underline;
   font-size: large;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.dog-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popout-text {
+  color:#957186;
+}
+
+.input-label {
+  font-size: xx-large;
+  font-weight: bold;
+  margin-top: 3em;
+}
+
+.instruction-text {
+  font-size: small;
 }
