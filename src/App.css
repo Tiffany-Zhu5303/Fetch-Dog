@@ -24,14 +24,7 @@ datalist {
   text-decoration: none;
 }
 
-#breeds-options {
-  width: 20vw;
-  color: #320C3A;
-  background-color: whitesmoke;
-  scrollbar-color: #320C3A #EAE8FF;
-}
-
-.homepage, .homepage-content {
+.homepage, .homepage-content, .breeds-page {
   width: 100vw;
   height: 90vh;
   display: flex;
@@ -90,6 +83,7 @@ datalist {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
 }
 
 .popout-text {
@@ -104,4 +98,24 @@ datalist {
 
 .instruction-text {
   font-size: small;
+}
+
+.select-breeds-options {
+  color:#320C3A;
+  scrollbar-color: #320C3A whitesmoke;
+  background-color: whitesmoke;
+  min-width: 20vw;
+  max-width: 40vw;
+  max-height: 25vh;
+}
+
+.select-breeds__control {
+  max-height: 25vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.select-breeds__multi-value {
+  background-color: #957186;
+  color:#320C3A;
 }

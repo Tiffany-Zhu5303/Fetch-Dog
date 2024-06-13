@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import Select from "react-select";
+import { Link } from "react-router-dom";
 
 const DogForm = ({ formType, formOptions }) => {
     const [breeds, setBreeds] = useState([]);
@@ -11,10 +12,6 @@ const DogForm = ({ formType, formOptions }) => {
         numCounter.innerHTML = `${e.target.value} dogs`;
     }
 
-    const submitForm = () => {
-
-    }
-
     return(
         <div className="form-page">
             <form className="dog-form">
@@ -23,11 +20,14 @@ const DogForm = ({ formType, formOptions }) => {
                         <label htmlFor="breeds" className="input-label">Choose <span className="popout-text">one</span> or 
                         <span className="popout-text"> more</span> breed(s)
                         <p className="instruction-text center-align">(Hold control/command to select multiple options)</p></label>
-                        <Select className="select-breeds"
+                        <Select 
+                            className="select-breeds-options"
+                            classNamePrefix="select-breeds"
                             defaultValue={breeds}
                             onChange={setBreeds}
                             options={formOptions}
                             isMulti
+                            isSearchable
                             />
                         <label htmlFor="numDogs" className="input-label">Number of dogs</label>
                         <input type="range" min="1" max="50" id="form-slider" list="markers" onChange={updateCounter}></input>
@@ -51,7 +51,7 @@ const DogForm = ({ formType, formOptions }) => {
                         <h3>Complete randomized fetch of any breed</h3>
                     </>
                 }
-                <button onClick={submitForm} className="form-fetch-button">Fetch!</button>
+                <button className="form-fetch-button">Fetch!</button>
             </form>
         </div>
     );
