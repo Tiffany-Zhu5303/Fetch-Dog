@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Fetch-DogAPI/static/css/main.ae00bbe5.css",
-    "main.js": "/Fetch-DogAPI/static/js/main.ea413d67.js",
+    "main.js": "/Fetch-DogAPI/static/js/main.7e8655e6.js",
     "static/js/453.fea88638.chunk.js": "/Fetch-DogAPI/static/js/453.fea88638.chunk.js",
     "index.html": "/Fetch-DogAPI/index.html",
     "main.ae00bbe5.css.map": "/Fetch-DogAPI/static/css/main.ae00bbe5.css.map",
-    "main.ea413d67.js.map": "/Fetch-DogAPI/static/js/main.ea413d67.js.map",
+    "main.7e8655e6.js.map": "/Fetch-DogAPI/static/js/main.7e8655e6.js.map",
     "453.fea88638.chunk.js.map": "/Fetch-DogAPI/static/js/453.fea88638.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ae00bbe5.css",
-    "static/js/main.ea413d67.js"
+    "static/js/main.7e8655e6.js"
   ]
 }
