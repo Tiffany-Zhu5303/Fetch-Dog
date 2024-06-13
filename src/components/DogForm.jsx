@@ -1,10 +1,18 @@
-import React, { useEffect } from "react";
+import React, {useState, useEffect} from "react";
+import Select from "react-select";
 
 const DogForm = ({ formType, formOptions }) => {
-    const updateCounter = () => {
-        var slider = document.getElementById("form-slider");
-        var numCounter = document.getElementById("num-dogs-input");
-        numCounter.innerHTML = `${slider.value} dogs`;
+    const [breeds, setBreeds] = useState([]);
+    const [numDogs, setNumDogs] = useState(0);
+
+    const updateCounter = (e) => {
+        const numCounter = document.getElementById("num-dogs-input");
+        setNumDogs(e.target.value);
+        numCounter.innerHTML = `${e.target.value} dogs`;
+    }
+
+    const submitForm = () => {
+
     }
 
     return(
@@ -15,19 +23,12 @@ const DogForm = ({ formType, formOptions }) => {
                         <label htmlFor="breeds" className="input-label">Choose <span className="popout-text">one</span> or 
                         <span className="popout-text"> more</span> breed(s)
                         <p className="instruction-text center-align">(Hold control/command to select multiple options)</p></label>
-                        <select name="breeds" id="breeds-options" multiple>
-                            <option value="">--Choose Your Breed(s)--</option>
-                            {formOptions && Object.keys(formOptions).length > 0 ?
-                            Object.keys(formOptions).map(key => {
-                                if(formOptions[key].length === 0){
-                                    return( <option value={key}>{key}</option> )  
-                                }else{
-                                    for(let i = 0; i < formOptions[key].length; i++){
-                                        return( <option value={formOptions[key][i] + " " + key}>{formOptions[key][i] + " " + key}</option>)
-                                    }
-                                }
-                                }) : null}
-                        </select>
+                        <Select className="select-breeds"
+                            defaultValue={breeds}
+                            onChange={setBreeds}
+                            options={formOptions}
+                            isMulti
+                            />
                         <label htmlFor="numDogs" className="input-label">Number of dogs</label>
                         <input type="range" min="1" max="50" id="form-slider" list="markers" onChange={updateCounter}></input>
                         <datalist id="markers" className="slider-markers">
@@ -50,7 +51,7 @@ const DogForm = ({ formType, formOptions }) => {
                         <h3>Complete randomized fetch of any breed</h3>
                     </>
                 }
-                
+                <button onClick={submitForm} className="form-fetch-button">Fetch!</button>
             </form>
         </div>
     );

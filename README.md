@@ -69,3 +69,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # Fetch-DogAPI
+
+## Planning
+Check out this project's [https://www.figma.com/design/h7RYyAKIq1BcotroGtpkKC/Untitled?node-id=0-1&t=N0ZVW3NU1QjGj22G-1](Figma)!

@@ -12,7 +12,27 @@ const Breeds = () => {
             .then(response => response.json())
             .then(data => {
                 console.log("breeds: ", data.message);
-                setBreeds(data.message);
+                let formatBreeds = [];
+                const objectKeys = Object.keys(data.message);
+                for(const key in objectKeys){
+                    if(data.message[objectKeys[key]].length > 0){
+                        for(let i = 0; i < data.message[objectKeys[key]].length; i++){
+                            formatBreeds.push({
+                                "value":data.message[objectKeys[key]][i]+ " " + objectKeys[key],
+                                "label":data.message[objectKeys[key]][i]+ " " + objectKeys[key]
+                            })
+                        }
+                    }
+                    else{
+                        formatBreeds.push({
+                            "value":objectKeys[key],
+                            "label":objectKeys[key]
+                        })
+                    }
+                }
+
+                console.log(formatBreeds)
+                setBreeds(formatBreeds);
             })
             .catch(err => {
                 console.log(err);

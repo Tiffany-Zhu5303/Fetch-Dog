@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import Navbar from './components/navbar';
 import Breeds from './pages/Breeds';
+import Displays from './pages/Displays';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,13 @@ const router = createBrowserRouter([
       },
       {
         path:"/Breed",
-        element: <Breeds />
+        element: <Breeds />,
+        children: [
+          {
+            path:"/Breed/Results",
+            element: <Displays />
+          }
+        ]
       }
     ],
   },
