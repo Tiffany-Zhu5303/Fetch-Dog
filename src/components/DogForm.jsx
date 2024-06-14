@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const DogForm = ({ formType, formOptions }) => {
     const [breeds, setBreeds] = useState([]);
-    const [numDogs, setNumDogs] = useState(0);
+    const [numDogs, setNumDogs] = useState(50);
 
     const updateCounter = (e) => {
         const numCounter = document.getElementById("num-dogs-input");
@@ -20,7 +20,7 @@ const DogForm = ({ formType, formOptions }) => {
                         <label htmlFor="breeds" className="input-label">Choose <span className="popout-text">one</span> or 
                         <span className="popout-text"> more</span> breed(s)
                         <p className="instruction-text center-align">(Hold control/command to select multiple options)</p></label>
-                        <Select 
+                        <Select id="breeds"
                             className="select-breeds-options"
                             classNamePrefix="select-breeds"
                             defaultValue={breeds}
@@ -29,7 +29,8 @@ const DogForm = ({ formType, formOptions }) => {
                             isMulti
                             isSearchable
                             />
-                        <label htmlFor="numDogs" className="input-label">Number of dogs</label>
+                        {breeds ? console.log(breeds.length):null}
+                        <label htmlFor="form-slider" className="input-label">Number of dogs</label>
                         <input type="range" min="1" max="50" id="form-slider" list="markers" onChange={updateCounter}></input>
                         <datalist id="markers" className="slider-markers">
                             <option value="1" label="1"></option>
@@ -51,7 +52,9 @@ const DogForm = ({ formType, formOptions }) => {
                         <h3>Complete randomized fetch of any breed</h3>
                     </>
                 }
-                <button className="form-fetch-button">Fetch!</button>
+                {breeds && breeds.length > 0 ? 
+                <Link to="/Breed/Results" state={{"type":"breeds", "breeds":breeds, "num":numDogs}} className="form-fetch-button">Fetch!</Link>
+                : <button onClick={() => alert("Please choose at least one breed!")} className="form-fetch-button">Fetch!</button>}
             </form>
         </div>
     );

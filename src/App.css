@@ -24,12 +24,17 @@ datalist {
   text-decoration: none;
 }
 
-.homepage, .homepage-content, .breeds-page {
+.homepage, .homepage-content, .breeds-page, .display-page {
   width: 100vw;
   height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.display-page {
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 .homepage-content {
@@ -118,4 +123,50 @@ datalist {
 .select-breeds__multi-value {
   background-color: #957186;
   color:#320C3A;
+}
+
+.form-fetch-button, .back-button {
+  background-color: #F8A91F;
+  color:#320C3A;
+  font-weight: bold;
+  font-size: large;
+  border: none;
+  border-radius: 5%;
+  padding: 0.5em 1em;
+  margin-top: 3em;
+}
+
+.form-fetch-button:hover, .back-button:hover {
+  background-color: #320C3A;
+  color:#F8A91F;
+  box-shadow: 0px 0px 40px 20px #957186;
+}
+
+.back-button {
+  margin-bottom: 5em;
+}
+
+.result-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.display-breed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display-breed-name {
+  margin-top: 1em;
+}
+
+.dog-image {
+  min-width: 20vw;
+  max-width: 30vw;
+  min-height: 20vh;
+  max-height: 40vh;
+  padding: 1em;
 }

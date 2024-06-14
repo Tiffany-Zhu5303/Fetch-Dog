@@ -17,12 +17,10 @@ const router = createBrowserRouter([
       {
         path:"/Breed",
         element: <Breeds />,
-        children: [
-          {
-            path:"/Breed/Results",
-            element: <Displays />
-          }
-        ]
+      },
+      {
+        path:"/Breed/Results",
+        element: <Displays />
       }
     ],
   },
