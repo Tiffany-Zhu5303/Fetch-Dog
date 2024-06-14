@@ -14,7 +14,8 @@ const Displays = () => {
             for(const breed in Object.keys(props.breeds)){
                 if(props.num > 1){
                     fetch(`https://dog.ceo/api/breed/${props.breeds[breed].value}/images/random/${props.num}`,{
-                        method:"GET"
+                        method:"GET",
+                        mode:"no-cors"
                     })
                     .then(response => response.json())
                     .then(data => {

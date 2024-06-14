@@ -9,7 +9,11 @@ const DogForm = ({ formType, formOptions }) => {
     const updateCounter = (e) => {
         const numCounter = document.getElementById("num-dogs-input");
         setNumDogs(e.target.value);
-        numCounter.innerHTML = `${e.target.value} dogs`;
+        if(e.target.value > 1){
+            numCounter.innerHTML = `${e.target.value} dogs`;
+        }else{
+            numCounter.innerHTML = `${e.target.value} dog`;
+        }
     }
 
     return(

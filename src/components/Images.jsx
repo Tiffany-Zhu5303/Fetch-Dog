@@ -1,7 +1,7 @@
 import React from "react";
 
 const Images = ({breedName, imgLinks, num}) => {
-    console.log("images", typeof(imgLinks));
+    console.log("images", imgLinks, num);
     return(
         <div className="display-breed-container">
             <h1 className="display-breed-name">{breedName}</h1>
@@ -10,8 +10,7 @@ const Images = ({breedName, imgLinks, num}) => {
                     imgLinks.map(image => {
                         return(<img src={image} alt={"random "+breedName} key={image} className="dog-image"/>)
                     })
-                : null}
-                {imgLinks.length > 0 && num === 1 ? <img src={imgLinks} alt={"random "+breedName} className={"dog-image"} />:null}
+                : <img src={imgLinks} alt={"random "+breedName} className={"dog-image"} />}
             </div>
         </div>
     );
