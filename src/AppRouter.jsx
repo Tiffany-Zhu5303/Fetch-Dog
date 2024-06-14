@@ -4,6 +4,9 @@ import App from './App';
 import Navbar from './components/navbar';
 import Breeds from './pages/Breeds';
 import Displays from './pages/Displays';
+import Random from './pages/Random';
+import Favorites from './pages/Favorites';
+import About from './pages/About';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +24,18 @@ const router = createBrowserRouter([
       {
         path:"/Breed/Results",
         element: <Displays />
+      },
+      {
+        path:"/Favorites",
+        element: <Favorites />
+      },
+      {
+        path:"/About",
+        element: <About/>
+      },
+      {
+        path:"/Random",
+        element: <Random />
       }
     ],
   },
