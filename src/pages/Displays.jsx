@@ -25,6 +25,12 @@ const Displays = () => {
                             }
                         });
                     })
+                }else{
+                    fetch(`https://dog.ceo/api/breed/${props.breeds[breed].value}/images/random`,{
+                        method:"GET"
+                    })
+                    .then(response => response.json())
+                    .then(data => setImages({[props.breeds[breed].value]:data}))
                 }
             }
         }
@@ -40,7 +46,7 @@ const Displays = () => {
             {images && Object.keys(images).length > 0 ? Object.keys(images).map((breed) => {
                 const capBreedName = breed.charAt(0).toUpperCase() + breed.slice(1);
                 if(images[breed].status === "success"){
-                    return(<Images breedName={capBreedName} imgLinks={images[breed].message} />)
+                    return(<Images breedName={capBreedName} imgLinks={images[breed].message} num={props.num} />)
                 }else{
                     return(<h1>No Images Found For {capBreedName} :</h1>)
                 }
