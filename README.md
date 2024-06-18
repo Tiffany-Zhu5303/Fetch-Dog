@@ -5,9 +5,10 @@ DogFetcher is a front-end web app that allows users to generate a gallery of dog
 
 ## Planning
 
-Check out this project's [https://www.figma.com/design/h7RYyAKIq1BcotroGtpkKC/Untitled?node-id=0-1&t=N0ZVW3NU1QjGj22G-1](Figma)!
+Check out this project's [Figma](https://www.figma.com/design/h7RYyAKIq1BcotroGtpkKC/Untitled?node-id=0-1&t=N0ZVW3NU1QjGj22G-1)!
 
 This project was incredibly fun to take on especially with the variety of images of adorable dogs during the development of this webapp.
+
 Currently, Dog Fetcher is a simple front-end web app. For future growth of this web app, I would like to explore more libraries for styling to improve user interactions. To expand upon the front end, I plan to implement a backend which allows users to save images to a community favorites page.
 
 # Getting Started with Create React App
