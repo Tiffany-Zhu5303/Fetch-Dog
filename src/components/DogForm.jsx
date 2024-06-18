@@ -33,32 +33,32 @@ const DogForm = ({ formType, formOptions }) => {
                             isMulti
                             isSearchable
                             />
-                        {breeds ? console.log(breeds.length):null}
-                        <label htmlFor="form-slider" className="input-label">Number of dogs</label>
-                        <input type="range" min="1" max="50" id="form-slider" list="markers" onChange={updateCounter}></input>
-                        <datalist id="markers" className="slider-markers">
-                            <option value="1" label="1"></option>
-                            <option value="5" label="5"></option>
-                            <option value="10" label="10"></option>
-                            <option value="15" label="15"></option>
-                            <option value="20" label="20"></option>
-                            <option value="25" label="25"></option>
-                            <option value="30" label="30"></option>
-                            <option value="35" label="35"></option>
-                            <option value="40" label="40"></option>
-                            <option value="45" label="45"></option>
-                            <option value="50" label="50"></option>
-                        </datalist>
-                        <p id="num-dogs-input">50 dogs</p>
-                    </> :
+                    </>:
                     <>
                         <h2>Random Fetch</h2>
-                        <h3>Complete randomized fetch of any breed</h3>
+                        <h3>Complete randomized fetch of all dogs</h3>
                     </>
                 }
-                {breeds && breeds.length > 0 ? 
+                <label htmlFor="form-slider" className="input-label">Number of dogs</label>
+                <input type="range" min="1" max="50" id="form-slider" list="markers" onChange={updateCounter}></input>
+                <datalist id="markers" className="slider-markers">
+                    <option value="1" label="1"></option>
+                    <option value="5" label="5"></option>
+                    <option value="10" label="10"></option>
+                    <option value="15" label="15"></option>
+                    <option value="20" label="20"></option>
+                    <option value="25" label="25"></option>
+                    <option value="30" label="30"></option>
+                    <option value="35" label="35"></option>
+                    <option value="40" label="40"></option>
+                    <option value="45" label="45"></option>
+                    <option value="50" label="50"></option>
+                </datalist>
+                <p id="num-dogs-input">50 dogs</p>
+                {formType === "breed" && breeds && breeds.length > 0 ? 
                 <Link to="/Breed/Results" state={{"type":"breeds", "breeds":breeds, "num":numDogs}} className="form-fetch-button">Fetch!</Link>
-                : <button onClick={() => alert("Please choose at least one breed!")} className="form-fetch-button">Fetch!</button>}
+                : formType === "breed" ? <button onClick={() => alert("Please choose at least one breed!")} className="form-fetch-button">Fetch!</button>:
+                <Link to="/Random/Results" state={{"type":"random", "num":numDogs}} className="form-fetch-button">Fetch!</Link>}
             </form>
         </div>
     );

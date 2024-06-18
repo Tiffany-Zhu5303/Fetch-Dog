@@ -26,16 +26,20 @@ const router = createBrowserRouter([
         element: <Displays />
       },
       {
+        path:"/Random",
+        element: <Random />
+      },
+      {
+        path:"/Random/Results",
+        element: <Displays />
+      },
+      {
         path:"/Favorites",
         element: <Favorites />
       },
       {
         path:"/About",
         element: <About/>
-      },
-      {
-        path:"/Random",
-        element: <Random />
       }
     ],
   },

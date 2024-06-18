@@ -30,8 +30,6 @@ const Breeds = () => {
                         })
                     }
                 }
-
-                console.log(formatBreeds)
                 setBreeds(formatBreeds);
             })
             .catch(err => {

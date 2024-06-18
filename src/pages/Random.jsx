@@ -1,10 +1,11 @@
 import React from "react";
+import DogForm from "../components/DogForm";
 
 const Random = () => {
     return(
-        <>
-        <h1>Random coming soon!</h1>
-        </>
+        <div className="random-page">
+            <DogForm formType="random" />
+        </div>
     );
 };
 
