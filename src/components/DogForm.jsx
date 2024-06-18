@@ -16,6 +16,11 @@ const DogForm = ({ formType, formOptions }) => {
         }
     }
 
+    const handleMissingInfo = (e) => {
+        alert("Please choose at least one breed!")
+        e.preventDefault();
+    }
+
     return(
         <div className="form-page">
             <form className="dog-form">
@@ -57,7 +62,7 @@ const DogForm = ({ formType, formOptions }) => {
                 <p id="num-dogs-input">50 dogs</p>
                 {formType === "breed" && breeds && breeds.length > 0 ? 
                 <Link to="/Breed/Results" state={{"type":"breeds", "breeds":breeds, "num":numDogs}} className="form-fetch-button">Fetch!</Link>
-                : formType === "breed" ? <button onClick={() => alert("Please choose at least one breed!")} className="form-fetch-button">Fetch!</button>:
+                : formType === "breed" ? <button onClick={handleMissingInfo} className="form-fetch-button">Fetch!</button>:
                 <Link to="/Random/Results" state={{"type":"random", "num":numDogs}} className="form-fetch-button">Fetch!</Link>}
             </form>
         </div>
