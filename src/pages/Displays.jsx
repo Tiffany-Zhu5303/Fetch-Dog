@@ -13,11 +13,11 @@ const Displays = () => {
             if(props.type === "breeds"){
                 for(const breed in Object.keys(props.breeds)){
                     let subBreed = []
-                    if(props.breeds[breed].value.indexOf(" ") !== 0){
+                    if(props.breeds[breed].value.indexOf(" ") !== -1){
                         subBreed = props.breeds[breed].value.split(" ");
-                        console.log(subBreed);
                     }
-
+                    
+                    console.log(props.breeds[breed].value, subBreed)
                     let query = ``;
                     if(subBreed.length === 0){
                         query = `https://dog.ceo/api/breed/${props.breeds[breed].value}/images/random`;
