@@ -36,7 +36,7 @@ const About = () => {
             : <img src={fetchImg} alt="fetch rewards logo" className="about-image"/>}
 
             {image && image.status === "success" ? 
-            <p>Image from <a href="https://dog.ceo/dog-api/documentation/" className="site-link">Dog API</a></p> 
+            <p>Image from <a href="https://dog.ceo/dog-api/" className="site-link">Dog API</a></p> 
             : <p><a href="https://fetch.com/" className="site-link">Fetch Logo</a></p>}
         </div>
     );
