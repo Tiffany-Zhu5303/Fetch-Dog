@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/Fetch-DogAPI/static/css/main.94605d0c.css",
-    "main.js": "/Fetch-DogAPI/static/js/main.078fae9a.js",
+    "main.css": "/Fetch-DogAPI/static/css/main.a4cfe2bd.css",
+    "main.js": "/Fetch-DogAPI/static/js/main.b68cebeb.js",
     "static/js/453.fea88638.chunk.js": "/Fetch-DogAPI/static/js/453.fea88638.chunk.js",
+    "static/media/fetch-rewards-icon.png": "/Fetch-DogAPI/static/media/fetch-rewards-icon.ef6e504dc501afea5d2e.png",
     "index.html": "/Fetch-DogAPI/index.html",
-    "main.94605d0c.css.map": "/Fetch-DogAPI/static/css/main.94605d0c.css.map",
-    "main.078fae9a.js.map": "/Fetch-DogAPI/static/js/main.078fae9a.js.map",
+    "main.a4cfe2bd.css.map": "/Fetch-DogAPI/static/css/main.a4cfe2bd.css.map",
+    "main.b68cebeb.js.map": "/Fetch-DogAPI/static/js/main.b68cebeb.js.map",
     "453.fea88638.chunk.js.map": "/Fetch-DogAPI/static/js/453.fea88638.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.94605d0c.css",
-    "static/js/main.078fae9a.js"
+    "static/css/main.a4cfe2bd.css",
+    "static/js/main.b68cebeb.js"
   ]
 }
