@@ -48,15 +48,7 @@ datalist {
 .homepage-buttons {
   margin: 3em 2em;
   padding: 0.75em 3em;
-  border-radius: 1em;
-  background-color: #F8A91F;
-  color: #320C3A;
   text-decoration: none;
-  font-weight: bold;
-}
-
-.homepage-buttons:hover {
-  box-shadow: 0px 0px 40px 20px #957186;
 }
 
 .navbar {
@@ -129,7 +121,7 @@ datalist {
   color:#320C3A;
 }
 
-.form-fetch-button, .back-button {
+.form-fetch-button, .back-button, .homepage-buttons {
   background-color: #F8A91F;
   color:#320C3A;
   font-weight: bold;
@@ -140,7 +132,7 @@ datalist {
   margin-top: 3em;
 }
 
-.form-fetch-button:hover, .back-button:hover {
+.form-fetch-button:hover, .back-button:hover, .homepage-buttons:hover {
   background-color: #320C3A;
   color:#F8A91F;
   box-shadow: 0px 0px 40px 20px #957186;
@@ -172,7 +164,14 @@ datalist {
   max-width: 30vw;
   min-height: 20vh;
   max-height: 40vh;
+  border-radius: 8%;
   padding: 1em;
+}
+
+.dog-image:hover {
+  padding: 0em;
+  margin: 1em;
+  box-shadow: 0px 0px 40px 20px #EAE8FF;
 }
 
 .about-intro {

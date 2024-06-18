@@ -87,8 +87,7 @@ const Displays = () => {
 
     return(
         <div className="display-page">  
-            {props.type === "random" && props.num === 1 ? <h1>Result</h1>
-            : props.type === "random" && props.num > 1 && images.message ? <h1>{(images.message).length} Results</h1> : null}
+            {props.type === "random" ? <h1>Random Search</h1>: null}
             {props.type === "breeds" && images && Object.keys(images).length > 0 ? Object.keys(images).map((breed) => {
                 const capBreedName = breed.charAt(0).toUpperCase() + breed.slice(1);
                 if(images[breed].status === "success"){
