@@ -5,6 +5,7 @@ const Images = ({breedName, imgLinks, num}) => {
     return(
         <div className="display-breed-container">
             <h1 className="display-breed-name">{breedName}</h1>
+            <h3>{imgLinks.length} Results</h3>
             <div className="result-images">
                 {imgLinks && num > 1 && imgLinks.length > 0 ? 
                     imgLinks.map(image => {

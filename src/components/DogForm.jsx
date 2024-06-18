@@ -39,7 +39,7 @@ const DogForm = ({ formType, formOptions }) => {
                         <h3>Complete randomized fetch of all dogs</h3>
                     </>
                 }
-                <label htmlFor="form-slider" className="input-label">Number of dogs</label>
+                <label htmlFor="form-slider" className="input-label"><span className="popout-text">Max</span> number of dogs</label>
                 <input type="range" min="1" max="50" id="form-slider" list="markers" onChange={updateCounter}></input>
                 <datalist id="markers" className="slider-markers">
                     <option value="1" label="1"></option>

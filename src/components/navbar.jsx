@@ -9,7 +9,6 @@ const Navbar = () => {
                 <div className='nav-links'>
                 <Link to="/Breed" className='nav-link'>Breed</Link>
                 <Link to="/Random" className='nav-link'>Random</Link>
-                <Link to="/Favorites" className='nav-link'>Favorites</Link>
                 <Link to="/About" className='nav-link'>About</Link>
                 </div>
             </div>
