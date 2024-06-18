@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Fetch-DogAPI/static/css/main.a4cfe2bd.css",
-    "main.js": "/Fetch-DogAPI/static/js/main.b68cebeb.js",
+    "main.js": "/Fetch-DogAPI/static/js/main.6f7080fb.js",
     "static/js/453.fea88638.chunk.js": "/Fetch-DogAPI/static/js/453.fea88638.chunk.js",
     "static/media/fetch-rewards-icon.png": "/Fetch-DogAPI/static/media/fetch-rewards-icon.ef6e504dc501afea5d2e.png",
     "index.html": "/Fetch-DogAPI/index.html",
     "main.a4cfe2bd.css.map": "/Fetch-DogAPI/static/css/main.a4cfe2bd.css.map",
-    "main.b68cebeb.js.map": "/Fetch-DogAPI/static/js/main.b68cebeb.js.map",
+    "main.6f7080fb.js.map": "/Fetch-DogAPI/static/js/main.6f7080fb.js.map",
     "453.fea88638.chunk.js.map": "/Fetch-DogAPI/static/js/453.fea88638.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4cfe2bd.css",
-    "static/js/main.b68cebeb.js"
+    "static/js/main.6f7080fb.js"
   ]
 }
