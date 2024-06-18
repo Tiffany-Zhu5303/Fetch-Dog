@@ -9,11 +9,24 @@ const Displays = () => {
     const [images, setImages] = useState({});
 
     useEffect(() => {
-        const getImages = () => {
+        const getImages = async() => {
             if(props.type === "breeds"){
                 for(const breed in Object.keys(props.breeds)){
+                    let subBreed = []
+                    if(props.breeds[breed].value.indexOf(" ") !== 0){
+                        subBreed = props.breeds[breed].value.split(" ");
+                        console.log(subBreed);
+                    }
+
+                    let query = ``;
+                    if(subBreed.length === 0){
+                        query = `https://dog.ceo/api/breed/${props.breeds[breed].value}/images/random`;
+                    }else{
+                        query = `https://dog.ceo/api/breed/${subBreed[1]}/${subBreed[0]}/images/random`;
+                    }
+
                     if(props.num > 1){
-                        fetch(`https://dog.ceo/api/breed/${props.breeds[breed].value}/images/random/${props.num}`,{
+                        fetch(query+`/${props.num}`, {
                             method:"GET",
                         })
                         .then(response => response.json())
@@ -30,7 +43,7 @@ const Displays = () => {
                             alert("An error has occurred. Please try again at a later time.")
                         });
                     }else{
-                        fetch(`https://dog.ceo/api/breed/${props.breeds[breed].value}/images/random`,{
+                        fetch(query,{
                             method:"GET",
                         })
                         .then(response => response.json())
